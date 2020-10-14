@@ -18,6 +18,16 @@ class EmployeeRepository
     end
   end
 
+  def find(id)
+    @employees.find { |employee| employee.id == id } # instance / nil
+  end
+
+  def all_delivery_guys
+    @employees.select do |employee|
+      employee.delivery_guy?
+    end
+  end
+
   private
 
   def load_csv

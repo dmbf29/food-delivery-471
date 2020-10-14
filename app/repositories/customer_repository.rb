@@ -20,6 +20,10 @@ class CustomerRepository
     save_csv
   end
 
+  def find(id)
+    @customers.find { |customer| customer.id == id } # instance / nil
+  end
+
   private
 
   def load_csv

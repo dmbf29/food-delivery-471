@@ -10,7 +10,7 @@ class SessionsController
     # ask the user for username
     username = @view.ask_for('username')
     # ask the user for password
-    password = @view.ask_for('password')
+    password = @view.ask_for_password
     # employee = ask the employee repository for an employee by the username
     employee = @employee_repository.find_by_username(username)
     # check to see if that employee's password matches with the one given
